@@ -24,7 +24,7 @@
 
             $client = new GuzzleHttp\Client();
 
-            $client->request('PUT', 'http://172.25.96.1:3000/api/song/' . $id, [
+            $client->request('PUT', 'http://54.89.136.11:3000/api/song/' . $id, [
                 'body' => '{ "rate" : "'.$valoracion.'" }',
                 'headers' => [
                     'Content-Type' => 'application/json', 
@@ -49,7 +49,7 @@
 
             $client = new GuzzleHttp\Client();
 
-            $client->request('PUT', 'http://172.25.96.1:3000/api/song/' . $id, [
+            $client->request('PUT', 'http://54.89.136.11:3000/api/song/' . $id, [
                 'body' => '{ "rate" : "'.$valoracion.'" }',
                 'headers' => [
                     'Content-Type' => 'application/json', 

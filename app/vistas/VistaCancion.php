@@ -34,7 +34,7 @@
 
             $client = new GuzzleHttp\Client();
 
-            $response = $client->request('GET', 'http://172.25.96.1:3000/api/song', [
+            $response = $client->request('GET', 'http://54.89.136.11:3000/api/song', [
             'headers' => [ 'Authorization' => $_SESSION['token'] ]
             ]);
 
@@ -118,7 +118,7 @@
 
             $client = new GuzzleHttp\Client();
 
-            $response = $client->request('GET', 'http://172.25.96.1:3000/api/song/ranking/toprated', [
+            $response = $client->request('GET', 'http://54.89.136.11:3000/api/song/ranking/toprated', [
             'headers' => [ 'Authorization' => $_SESSION['token'] ]
             ]);
 
