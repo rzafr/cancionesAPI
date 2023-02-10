@@ -1,14 +1,17 @@
 // Configuramos express y cargamos las rutas en la aplicacion fusionando todos los datos
-const express = require('express')
+const express = require('express');
+const cors = require('cors');
 
 // Incializamos express y lo guardamos en la variable app
-const app = express()
+const app = express();
+
+app.use(cors());
 
 // Configuramos el body, todas las respuestas seran con JSON
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
-// Soluciona el problea de CORS
+// Soluciona el problema de CORS
 // Permite peticiones a la API desde ese dominio. Poner *, para atender peticiones desde cualquier punto.
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
