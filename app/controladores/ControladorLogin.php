@@ -24,7 +24,7 @@
             require_once('vendor/autoload.php');
             $client = new GuzzleHttp\Client();
             
-            $response = $client->request('POST', 'http://172.27.144.1:3000/api/login', [
+            $response = $client->request('POST', 'http://54.89.136.11:3000/api/login', [
             'body' => '{ "email" : "'.$email.'", "password" : "'.$password.'" }',
             'headers' => [ 'Content-Type' => 'application/json' ]
             ]);
