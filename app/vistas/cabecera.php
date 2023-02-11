@@ -10,6 +10,27 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+        p.clasificacion {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        p.clasificacion input {
+            position: absolute;
+            top: -100px;
+        }
+
+        p.clasificacion label {
+            float: right;
+            color: #333;
+        }
+
+        p.clasificacion label:hover,
+        p.clasificacion label:hover ~ label,
+        p.clasificacion input:checked ~ label {
+            color: #dd4;
+        }
     </style>
 </head>
 <body>

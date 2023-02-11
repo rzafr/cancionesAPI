@@ -23,11 +23,8 @@
             // Lanzamos peticion a la API para comprobar usuario y obtener su token
             require_once('vendor/autoload.php');
             $client = new GuzzleHttp\Client();
-
-            // AQUI HAY QUE CAMBIAR LA IP---------------------------------------------------------------
-
-
-            $response = $client->request('POST', 'http://54.89.136.11:3000/api/login', [
+            
+            $response = $client->request('POST', 'http://172.27.144.1:3000/api/login', [
             'body' => '{ "email" : "'.$email.'", "password" : "'.$password.'" }',
             'headers' => [ 'Content-Type' => 'application/json' ]
             ]);

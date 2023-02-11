@@ -17,51 +17,37 @@
         }
 
         /**
-         * Envia la valoracion junto con el token y se modifica en la BBDD
+         * Envia la valoracion junto con el token, se modifica en la BBDD y vuelve a la vista de canciones
          */
         public static function valorarCancion($id, $valoracion) {
             require_once('vendor/autoload.php');
 
             $client = new GuzzleHttp\Client();
 
-            $client->request('PUT', 'http://54.89.136.11:3000/api/song/' . $id, [
+            $client->request('PUT', 'http://172.27.144.1:3000/api/song/' . $id, [
                 'body' => '{ "rate" : "'.$valoracion.'" }',
                 'headers' => [
                     'Content-Type' => 'application/json', 
                     'Authorization' => $_SESSION['token'] ]
             ]);
 
-            // $response = $client->request('PUT', 'http://172.25.96.1:3000/api/song/' . $id, [
-            //     'body' => '{ "rate" : "'.$valoracion.'" }',
-            //     'headers' => [
-            //         'Content-Type' => 'application/json', 
-            //         'Authorization' => $_SESSION['token'] ]
-            // ]);
-
             VistaCancion::mostrarCanciones();
         }
 
         /**
-         * Envia la valoracion junto con el token y se modifica en la BBDD
+         * Envia la valoracion junto con el token, se modifica en la BBDD y vuelve a la vista de las mas valoradas
          */
         public static function valorarCancionTop($id, $valoracion) {
             require_once('vendor/autoload.php');
 
             $client = new GuzzleHttp\Client();
 
-            $client->request('PUT', 'http://54.89.136.11:3000/api/song/' . $id, [
+            $client->request('PUT', 'http://172.27.144.1:3000/api/song/' . $id, [
                 'body' => '{ "rate" : "'.$valoracion.'" }',
                 'headers' => [
                     'Content-Type' => 'application/json', 
                     'Authorization' => $_SESSION['token'] ]
             ]);
-
-            // $response = $client->request('PUT', 'http://172.25.96.1:3000/api/song/' . $id, [
-            //     'body' => '{ "rate" : "'.$valoracion.'" }',
-            //     'headers' => [
-            //         'Content-Type' => 'application/json', 
-            //         'Authorization' => $_SESSION['token'] ]
-            // ]);
 
             VistaCancion::mostrarCancionesMasValoradas();
         }

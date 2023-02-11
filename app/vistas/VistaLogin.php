@@ -11,12 +11,12 @@
 
 ?>
 
-            <nav class="nav border-bottom py-4 d-flex justify-content-center align-items-center">
+            <nav class="nav border-bottom py-4 d-flex align-items-center">
                 <div class="col-2">
                     <img src="./vistas/img/logo.png" alt="" width="120px" height="60px">
                 </div>
-                <div class="col-10 d-flex justify-content-center">   
-                    <h4>TUS CANCIONES FAVORITAS</h4>
+                <div class="col-6 d-flex justify-content-center">   
+                    <h3>TUS CANCIONES FAVORITAS</h3>
                 </div>
             </nav>
 

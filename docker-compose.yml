@@ -30,7 +30,7 @@ services:
       - .:/home/node/app
     ports:
       - "3000:3000"
-    command: "npm install" 
+    command: "npm run dev" 
 
 
   #MongoDB

@@ -7,11 +7,6 @@
           include_once $ruta; 
         }
 
-        $ruta = "./modelos/$clase.php"; 
-        if (file_exists($ruta)){ 
-            include_once $ruta; 
-        }
-
         $ruta = "./vistas/$clase.php"; 
         if (file_exists($ruta)){ 
             include_once $ruta; 
